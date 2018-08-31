@@ -117,7 +117,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Type Hierarchy",
     "title": "Distributions.nsamples",
     "category": "method",
-    "text": "nsamples(s::Sampleable)\n\nThe number of samples contained in A. Multiple samples are often organized into an array, depending on the variate form.\n\n\n\n\n\n"
+    "text": "nsamples(s::Sampleable)\n\nThe number of values contained in one sample of s. Multiple samples are often organized into an array, depending on the variate form.\n\n\n\n\n\n"
 },
 
 {
