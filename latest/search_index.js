@@ -277,7 +277,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Base.maximum",
     "category": "method",
-    "text": "maximum(d::Distribution)\n\nReturn the maximum of the support of d.\n\n\n\n\n\n"
+    "text": "maximum(d::UnivariateDistribution)\n\nReturn the maximum of the support of d.\n\n\n\n\n\n"
 },
 
 {
@@ -285,7 +285,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Base.minimum",
     "category": "method",
-    "text": "minimum(d::Distribution)\n\nReturn the minimum of the support of d.\n\n\n\n\n\n"
+    "text": "minimum(d::UnivariateDistribution)\n\nReturn the minimum of the support of d.\n\n\n\n\n\n"
+},
+
+{
+    "location": "univariate.html#Base.extrema-Tuple{Distribution{Univariate,S} where S<:ValueSupport}",
+    "page": "Univariate Distributions",
+    "title": "Base.extrema",
+    "category": "method",
+    "text": "extrema(d::UnivariateDistribution)\n\nReturn the minimum and maximum of the support of d as a 2-tuple.\n\n\n\n\n\n"
 },
 
 {
@@ -413,7 +421,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Computation of statistics",
     "category": "section",
-    "text": "maximum(::UnivariateDistribution)\nminimum(::UnivariateDistribution)\nmean(::UnivariateDistribution)\nvar(::UnivariateDistribution)\nstd(::UnivariateDistribution)\nmedian(::UnivariateDistribution)\nmodes(::UnivariateDistribution)\nmode(::UnivariateDistribution)\nskewness(::UnivariateDistribution)\nkurtosis(::UnivariateDistribution)\nisplatykurtic(::UnivariateDistribution)\nisleptokurtic(::UnivariateDistribution)\nismesokurtic(::UnivariateDistribution)\nentropy(::UnivariateDistribution)\nentropy(::UnivariateDistribution, ::Bool)\nmgf(::UnivariateDistribution, ::Any)\ncf(::UnivariateDistribution, ::Any)"
+    "text": "maximum(::UnivariateDistribution)\nminimum(::UnivariateDistribution)\nextrema(::UnivariateDistribution)\nmean(::UnivariateDistribution)\nvar(::UnivariateDistribution)\nstd(::UnivariateDistribution)\nmedian(::UnivariateDistribution)\nmodes(::UnivariateDistribution)\nmode(::UnivariateDistribution)\nskewness(::UnivariateDistribution)\nkurtosis(::UnivariateDistribution)\nisplatykurtic(::UnivariateDistribution)\nisleptokurtic(::UnivariateDistribution)\nismesokurtic(::UnivariateDistribution)\nentropy(::UnivariateDistribution)\nentropy(::UnivariateDistribution, ::Bool)\nmgf(::UnivariateDistribution, ::Any)\ncf(::UnivariateDistribution, ::Any)"
 },
 
 {
