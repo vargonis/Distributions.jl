@@ -1257,11 +1257,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "multivariate.html#Distributions.Product",
+    "page": "Multivariate Distributions",
+    "title": "Distributions.Product",
+    "category": "type",
+    "text": "Product <: MultivariateDistribution\n\nAn N dimensional MultivariateDistribution constructed from a vector of N independent UnivariateDistributions.\n\nProduct(Normal.(randn(10), 1)) # A 10-dimensional Product from 10 independent Normals.\n\n\n\n\n\n"
+},
+
+{
     "location": "multivariate.html#Distributions-1",
     "page": "Multivariate Distributions",
     "title": "Distributions",
     "category": "section",
-    "text": "Multinomial\nDistributions.AbstractMvNormal\nMvNormal\nMvNormalCanon\nMvLogNormal\nDirichlet"
+    "text": "Multinomial\nDistributions.AbstractMvNormal\nMvNormal\nMvNormalCanon\nMvLogNormal\nDirichlet\nProduct"
 },
 
 {
