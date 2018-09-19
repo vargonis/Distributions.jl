@@ -8,7 +8,7 @@ julia&gt; x = rand(d, 100)
 100-element Array{Float64,1}:
   0.376264
  -0.405272
- ...</code></pre><p>You can easily obtain the pdf, cdf, percentile, and many other functions for a distribution. For instance, the median (50th percentile) and the 95th percentile for the standard-normal distribution are given by:</p><pre><code class="language-julia">julia&gt; quantile(Normal(), [0.5, 0.95])
+ ...</code></pre><p>You can easily obtain the pdf, cdf, percentile, and many other functions for a distribution. For instance, the median (50th percentile) and the 95th percentile for the standard-normal distribution are given by:</p><pre><code class="language-julia">julia&gt; quantile.(Normal(), [0.5, 0.95])
 2-element Array{Float64,1}:
  0.0
  1.64485</code></pre><p>The normal distribution is parameterized by its mean and standard deviation. To draw random samples from a normal distribution with mean 1 and standard deviation 2, you write:</p><pre><code class="language-julia">julia&gt; rand(Normal(1, 2), 100)</code></pre><h2><a class="nav-anchor" id="Using-Other-Distributions-1" href="#Using-Other-Distributions-1">Using Other Distributions</a></h2><p>The package contains a large number of additional distributions of three main types:</p><ul><li><code>Univariate</code></li><li><code>Multivariate</code></li><li><code>Matrixvariate</code></li></ul><p>Each type splits further into <code>Discrete</code> and <code>Continuous</code>.</p><p>For instance, you can define the following distributions (among many others):</p><pre><code class="language-julia">julia&gt; Binomial(p) # Discrete univariate
