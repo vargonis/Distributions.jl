@@ -949,7 +949,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Distributions.Categorical",
     "category": "type",
-    "text": "Categorical(p)\n\nA Categorical distribution is parameterized by a probability vector p (of length K).\n\nP(X = k) = pk  quad textfor  k = 1 2 ldots K\n\nCategorical(p)   # Categorical distribution with probability vector p\nparams(d)        # Get the parameters, i.e. (p,)\nprobs(d)         # Get the probability vector, i.e. p\nncategories(d)   # Get the number of categories, i.e. K\n\nHere, p must be a real vector, of which all components are nonnegative and sum to one. Note: The input vector p is directly used as a field of the constructed distribution, without being copied. External links:\n\nCategorical distribution on Wikipedia\n\n\n\n\n\n"
+    "text": "Categorical(p)\n\nA Categorical distribution is parameterized by a probability vector p (of length K).\n\nP(X = k) = pk  quad textfor  k = 1 2 ldots K\n\nCategorical(p)   # Categorical distribution with probability vector p\nparams(d)        # Get the parameters, i.e. (p,)\nprobs(d)         # Get the probability vector, i.e. p\nncategories(d)   # Get the number of categories, i.e. K\n\nHere, p must be a real vector, of which all components are nonnegative and sum to one.\n\nNote: The input vector p is directly used as a field of the constructed distribution, without being copied.\n\nCategorical is simply a type alias describing a special case of a DiscreteNonParametric distribution, so non-specialized methods defined for DiscreteNonParametric apply to Categorical as well.\n\nExternal links:\n\nCategorical distribution on Wikipedia\n\n\n\n\n\n"
 },
 
 {
@@ -958,6 +958,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Distributions.DiscreteUniform",
     "category": "type",
     "text": "DiscreteUniform(a,b)\n\nA Discrete uniform distribution is a uniform distribution over a consecutive sequence of integers between a and b, inclusive.\n\nP(X = k) = 1  (b - a + 1) quad textfor  k = a a+1 ldots b\n\nDiscreteUniform(a, b)   # a uniform distribution over {a, a+1, ..., b}\n\nparams(d)       # Get the parameters, i.e. (a, b)\nspan(d)         # Get the span of the support, i.e. (b - a + 1)\nprobval(d)      # Get the probability value, i.e. 1 / (b - a + 1)\nminimum(d)      # Return a\nmaximum(d)      # Return b\n\nExternal links\n\nDiscrete uniform distribution on Wikipedia\n\n\n\n\n\n"
+},
+
+{
+    "location": "univariate.html#Distributions.DiscreteNonParametric",
+    "page": "Univariate Distributions",
+    "title": "Distributions.DiscreteNonParametric",
+    "category": "type",
+    "text": "DiscreteNonParametric(xs, ps)\n\nA Discrete nonparametric distribution explicitly defines an arbitrary probability mass function in terms of a list of real support values and their corresponding probabilities\n\nd = DiscreteNonParametric(xs, ps)\n\nparams(d)  # Get the parameters, i.e. (xs, ps)\nsupport(d) # Get a sorted AbstractVector describing the support (xs) of the distribution\nprobs(d)   # Get a Vector of the probabilities (ps) associated with the support\n\nExternal links\n\nProbability mass function on Wikipedia\n\n\n\n\n\n"
 },
 
 {
@@ -1013,7 +1021,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Discrete Distributions",
     "category": "section",
-    "text": "Bernoulli\nsuccprob\nfailprob\nBetaBinomial\nBinomial\nCategorical\nDiscreteUniform\nGeometric\nHypergeometric\nNegativeBinomial\nPoisson\nPoissonBinomial\nSkellam"
+    "text": "Bernoulli\nsuccprob\nfailprob\nBetaBinomial\nBinomial\nCategorical\nDiscreteUniform\nDiscreteNonParametric\nGeometric\nHypergeometric\nNegativeBinomial\nPoisson\nPoissonBinomial\nSkellam"
 },
 
 {
