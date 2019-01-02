@@ -685,7 +685,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Distributions.Gumbel",
     "category": "type",
-    "text": "Gumbel(μ, θ)\n\nThe Gumbel distribution  with location μ and scale θ has probability density function\n\nf(x mu theta) = frac1theta e^-(z + e^z)\nquad text with  z = fracx - mutheta\n\nGumbel()            # Gumbel distribution with zero location and unit scale, i.e. Gumbel(0, 1)\nGumbel(u)           # Gumbel distribution with location u and unit scale, i.e. Gumbel(u, 1)\nGumbel(u, b)        # Gumbel distribution with location u and scale b\n\nparams(d)        # Get the parameters, i.e. (u, b)\nlocation(d)      # Get the location parameter, i.e. u\nscale(d)         # Get the scale parameter, i.e. b\n\nExternal links\n\nGumbel distribution on Wikipedia\n\n\n\n\n\n"
+    "text": "Gumbel(μ, θ)\n\nThe Gumbel distribution  with location μ and scale θ has probability density function\n\nf(x mu theta) = frac1theta e^-(z + e^-z)\nquad text with  z = fracx - mutheta\n\nGumbel()            # Gumbel distribution with zero location and unit scale, i.e. Gumbel(0, 1)\nGumbel(u)           # Gumbel distribution with location u and unit scale, i.e. Gumbel(u, 1)\nGumbel(u, b)        # Gumbel distribution with location u and scale b\n\nparams(d)        # Get the parameters, i.e. (u, b)\nlocation(d)      # Get the location parameter, i.e. u\nscale(d)         # Get the scale parameter, i.e. b\n\nExternal links\n\nGumbel distribution on Wikipedia\n\n\n\n\n\n"
 },
 
 {
