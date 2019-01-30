@@ -797,7 +797,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Distributions.Normal",
     "category": "type",
-    "text": "Normal(μ,σ)\n\nThe Normal distribution with mean μ and standard deviation σ has probability density function\n\nf(x mu sigma) = frac1sqrt2 pi sigma^2\nexp left( - frac(x - mu)^22 sigma^2 right)\n\nNormal()          # standard Normal distribution with zero mean and unit variance\nNormal(mu)        # Normal distribution with mean mu and unit variance\nNormal(mu, sig)   # Normal distribution with mean mu and variance sig^2\n\nparams(d)         # Get the parameters, i.e. (mu, sig)\nmean(d)           # Get the mean, i.e. mu\nstd(d)            # Get the standard deviation, i.e. sig\n\nExternal links\n\nNormal distribution on Wikipedia\n\n\n\n\n\n"
+    "text": "Normal(μ,σ)\n\nThe Normal distribution with mean μ and standard deviation σ≥0 has probability density function\n\nf(x mu sigma) = frac1sqrt2 pi sigma^2\nexp left( - frac(x - mu)^22 sigma^2 right)\n\nNote that if σ == 0, then the distribution is a point mass concentrated at μ. Though not technically a continuous distribution, it is allowed so as to account for cases where σ may have underflowed, and the functions are defined by taking the pointwise limit as σ  0.\n\nNormal()          # standard Normal distribution with zero mean and unit variance\nNormal(mu)        # Normal distribution with mean mu and unit variance\nNormal(mu, sig)   # Normal distribution with mean mu and variance sig^2\n\nparams(d)         # Get the parameters, i.e. (mu, sig)\nmean(d)           # Get the mean, i.e. mu\nstd(d)            # Get the standard deviation, i.e. sig\n\nExternal links\n\nNormal distribution on Wikipedia\n\n\n\n\n\n"
 },
 
 {
