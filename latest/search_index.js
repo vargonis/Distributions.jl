@@ -841,6 +841,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "univariate.html#Distributions.StudentizedRange",
+    "page": "Univariate Distributions",
+    "title": "Distributions.StudentizedRange",
+    "category": "type",
+    "text": "StudentizedRange(ν, k)\n\nThe studentized range distribution has probability density function:\n\nf(q k nu) = fracsqrt2pik(k - 1)nu^nu2Gamma(fracnu2)2^nu2 - 1 int_0^infty x^nuphi(sqrtnux) int_-infty^infty phi(u)phi(u - qx)(Phi(u) - Phi(u - qx))^k - 2dudx\n\nwhere\n\nPhi(x) = frac1 + erf(fracxsqrt2)2 (Normal Distribution CDF)\nphi(x) = Phi(x) (Normal Distribution PDF)\n\nStudentizedRange(ν, k)     # Studentized Range Distribution with parameters ν and k\n\nparams(d)        # Get the parameters, i.e. (ν, k)\n\nExternal links\n\nStudentized range distribution on Wikipedia\n\n\n\n\n\n"
+},
+
+{
     "location": "univariate.html#Distributions.SymTriangularDist",
     "page": "Univariate Distributions",
     "title": "Distributions.SymTriangularDist",
@@ -901,7 +909,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Continuous Distributions",
     "category": "section",
-    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nRayleigh\nSemicircle\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
+    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nRayleigh\nSemicircle\nStudentizedRange\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
 },
 
 {
@@ -989,7 +997,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Distributions.NegativeBinomial",
     "category": "type",
-    "text": "NegativeBinomial(r,p)\n\nA Negative binomial distribution describes the number of failures before the rth success in a sequence of independent Bernoulli trials. It is parameterized by r, the number of successes, and p, the probability of success in an individual trial.\n\nP(X = k) = k + r - 1 choose k p^r (1 - p)^k quad textfor  k = 012ldots\n\nThe distribution remains well-defined for any positive r, in which case\n\nP(X = k) = fracGamma(k+r)k Gamma(r) p^r (1 - p)^k quad textfor  k = 012ldots\n\nNegativeBinomial()        # Negative binomial distribution with r = 1 and p = 0.5\nNegativeBinomial(r, p)    # Negative binomial distribution with r successes and success rate p\n\nparams(d)       # Get the parameters, i.e. (r, p)\nsuccprob(d)     # Get the success rate, i.e. p\nfailprob(d)     # Get the failure rate, i.e. 1 - p\n\nExternal links:\n\nNegative binomial distribution on Wikipedia\n\n\n\n\n\n"
+    "text": "NegativeBinomial(r,p)\n\nA Negative binomial distribution describes the number of failures before the rth success in a sequence of independent Bernoulli trials. It is parameterized by r, the number of successes, and p, the probability of success in an individual trial.\n\nP(X = k) = k + r - 1 choose k p^r (1 - p)^k quad textfor  k = 012ldots\n\nThe distribution remains well-defined for any positive r, in which case\n\nP(X = k) = fracGamma(k+r)k Gamma(r) p^r (1 - p)^k quad textfor  k = 012ldots\n\nNegativeBinomial()        # Negative binomial distribution with r = 1 and p = 0.5\nNegativeBinomial(r, p)    # Negative binomial distribution with r successes and success rate p\n\nparams(d)       # Get the parameters, i.e. (r, p)\nsuccprob(d)     # Get the success rate, i.e. p\nfailprob(d)     # Get the failure rate, i.e. 1 - p\n\nExternal links:\n\nNegative binomial distribution on Wolfram\n\nNote: The definition of the negative binomial distribution in Wolfram is different from the Wikipedia definition. In Wikipedia, r is the number of failures and k is the number of successes.\n\n\n\n\n\n"
 },
 
 {
