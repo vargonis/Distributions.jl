@@ -1589,7 +1589,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Distribution Fitting",
     "title": "Applicable distributions",
     "category": "section",
-    "text": "The fit_mle method has been implemented for the following distributions:Univariate:Bernoulli\nBeta\nBinomial\nCategorical\nDiscreteUniform\nExponential\nNormal\nGamma\nGeometric\nLaplace\nPareto\nPoisson\nUniformMultivariate:Multinomial\nMvNormal\nDirichletFor most of these distributions, the usage is as described above. For a few special distributions that require additional information for estimation, we have to use modified interface:fit_mle(Binomial, n, x)        # n is the number of trials in each experiment\nfit_mle(Binomial, n, x, w)\n\nfit_mle(Categorical, k, x)     # k is the space size (i.e. the number of distinct values)\nfit_mle(Categorical, k, x, w)\n\nfit_mle(Categorical, x)        # equivalent to fit_mle(Categorical, max(x), x)\nfit_mle(Categorical, x, w)"
+    "text": "The fit_mle method has been implemented for the following distributions:Univariate:Bernoulli\nBeta\nBinomial\nCategorical\nDiscreteUniform\nExponential\nNormal\nGamma\nGeometric\nLaplace\nPareto\nPoisson\nInverseGaussian\nUniformMultivariate:Multinomial\nMvNormal\nDirichletFor most of these distributions, the usage is as described above. For a few special distributions that require additional information for estimation, we have to use modified interface:fit_mle(Binomial, n, x)        # n is the number of trials in each experiment\nfit_mle(Binomial, n, x, w)\n\nfit_mle(Categorical, k, x)     # k is the space size (i.e. the number of distinct values)\nfit_mle(Categorical, k, x, w)\n\nfit_mle(Categorical, x)        # equivalent to fit_mle(Categorical, max(x), x)\nfit_mle(Categorical, x, w)"
 },
 
 {
