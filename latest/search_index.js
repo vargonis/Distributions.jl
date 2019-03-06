@@ -669,7 +669,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Distributions.Laplace",
     "category": "type",
-    "text": "Laplace(μ,θ)\n\nThe Laplace distribution with location μ and scale θ has probability density function\n\nf(x mu beta) = frac12 beta exp left(- fracx - mubeta right)\n\nLaplace()       # Laplace distribution with zero location and unit scale, i.e. Laplace(0, 1)\nLaplace(u)      # Laplace distribution with location u and unit scale, i.e. Laplace(u, 1)\nLaplace(u, b)   # Laplace distribution with location u ans scale b\n\nparams(d)       # Get the parameters, i.e. (u, b)\nlocation(d)     # Get the location parameter, i.e. u\nscale(d)        # Get the scale parameter, i.e. b\n\nExternal links\n\nLaplace distribution on Wikipedia\n\n\n\n\n\n"
+    "text": "Laplace(μ,β)\n\nThe Laplace distribution with location μ and scale β has probability density function\n\nf(x mu beta) = frac12 beta exp left(- fracx - mubeta right)\n\nLaplace()       # Laplace distribution with zero location and unit scale, i.e. Laplace(0, 1)\nLaplace(μ)      # Laplace distribution with location μ and unit scale, i.e. Laplace(μ, 1)\nLaplace(μ, β)   # Laplace distribution with location μ and scale β\n\nparams(d)       # Get the parameters, i.e., (μ, β)\nlocation(d)     # Get the location parameter, i.e. μ\nscale(d)        # Get the scale parameter, i.e. β\n\nExternal links\n\nLaplace distribution on Wikipedia\n\n\n\n\n\n"
 },
 
 {
