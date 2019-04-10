@@ -529,6 +529,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "univariate.html#Distributions.Chernoff",
+    "page": "Univariate Distributions",
+    "title": "Distributions.Chernoff",
+    "category": "type",
+    "text": "Chernoff()\n\nThe Chernoff distribution is the distribution of the random variable\n\nargmax_t in (-inftyinfty) ( G(t) - t^2 )\n\nwhere G is standard two–sided Brownian motion.  \n\nThe distribution arises as the limit distribution of various cube-root-n consistent estimators, including the isotonic regression estimator of Brunk, the isotonic density estimator of Grenander, the least median of squares estimator of Rousseeuw, and the maximum score estimator of Manski. \n\nFor theoretical results, see e.g. Kim and Pollard, Annals of Statistics, 1990.  The code for the  computation of pdf and cdf is based on the algorithm described in Groeneboom and Wellner,  Journal of Computational and Graphical Statistics, 2001.\n\nChernoff()\npdf(Chernoff(),x::Real)\ncdf(Chernoff(),x::Real)\nlogpdf(Chernoff(),x::Real)\nsurvivor(Chernoff(),x::Real)\nmean(Chernoff())\nvar(Chernoff())\nskewness(Chernoff())\nkurtosis(Chernoff())                  \nkurtosis(Chernoff(), excess::Bool)\nmode(Chernoff())\nentropy(Chernoff())\nrand(Chernoff())\nrand(rng, Chernoff()\ncdf(Chernoff(),-x)              #For tail probabilities, use this instead of 1-cdf(Chernoff(),x) \n\n\n\n\n\n"
+},
+
+{
     "location": "univariate.html#Distributions.Chi",
     "page": "Univariate Distributions",
     "title": "Distributions.Chi",
@@ -845,7 +853,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Continuous Distributions",
     "category": "section",
-    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nRayleigh\nSemicircle\nStudentizedRange\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
+    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChernoff\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nRayleigh\nSemicircle\nStudentizedRange\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
 },
 
 {
