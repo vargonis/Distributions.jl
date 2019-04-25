@@ -317,7 +317,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Distributions.isplatykurtic",
     "category": "method",
-    "text": "isplatykurtic(d)\n\nReturn whether d is platykurtic (i.e kurtosis(d) > 0).\n\n\n\n\n\n"
+    "text": "isplatykurtic(d)\n\nReturn whether d is platykurtic (i.e kurtosis(d) < 0).\n\n\n\n\n\n"
 },
 
 {
@@ -325,7 +325,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Distributions.isleptokurtic",
     "category": "method",
-    "text": "isleptokurtic(d)\n\nReturn whether d is leptokurtic (i.e kurtosis(d) < 0).\n\n\n\n\n\n"
+    "text": "isleptokurtic(d)\n\nReturn whether d is leptokurtic (i.e kurtosis(d) > 0).\n\n\n\n\n\n"
 },
 
 {
