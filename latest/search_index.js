@@ -697,6 +697,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "univariate.html#Distributions.LogitNormal",
+    "page": "Univariate Distributions",
+    "title": "Distributions.LogitNormal",
+    "category": "type",
+    "text": "LogitNormal(μ,σ)\n\nThe logit normal distribution is the distribution of  of a random variable whose logit has a Normal distribution. Or inversely, when applying the logistic function to a Normal random variable then the resulting random variable follows a logit normal distribution.\n\nIf X sim operatornameNormal(mu sigma) then operatornamelogistic(X) sim operatornameLogitNormal(musigma). \n\nThe probability density function is\n\nf(x mu sigma) = frac1x sqrt2 pi sigma^2\nexp left( - frac(logit(x) - mu)^22 sigma^2 right)\nquad x  0\n\nwhere the logit-Function is\n\nlogit(x) = ln(fracx1-x)\nquad 0  x  1\n\nLogitNormal()          # Logit-normal distribution with zero logit-mean and unit scale\nLogitNormal(mu)        # Logit-normal distribution with logit-mean mu and unit scale\nLogitNormal(mu, sig)   # Logit-normal distribution with logit-mean mu and scale sig\n\nparams(d)            # Get the parameters, i.e. (mu, sig)\nmedian(d)            # Get the median, i.e. logistic(mu)\n\nThe following properties have no analytical solution but numerical  approximations. In order to avoid package dependencies for  numerical optimization, they are currently not implemented.\n\nmean(d)      \nvar(d)      \nstd(d)\nmode(d)\n\nSimilarly, skewness, kurtosis, and entropy are not implemented.\n\nExternal links\n\nLogit normal distribution on Wikipedia\n\n\n\n\n\n"
+},
+
+{
     "location": "univariate.html#Distributions.LogNormal",
     "page": "Univariate Distributions",
     "title": "Distributions.LogNormal",
@@ -853,7 +861,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Continuous Distributions",
     "category": "section",
-    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChernoff\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nRayleigh\nSemicircle\nStudentizedRange\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
+    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChernoff\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogitNormal\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nRayleigh\nSemicircle\nStudentizedRange\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
 },
 
 {
