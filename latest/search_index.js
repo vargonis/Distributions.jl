@@ -1221,7 +1221,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Multivariate Distributions",
     "title": "Distributions.Dirichlet",
     "category": "type",
-    "text": "Dirichlet\n\nThe Dirichlet distribution is often used the conjugate prior for Categorical or Multinomial distributions. The probability density function of a Dirichlet distribution with parameter alpha = (alpha_1 ldots alpha_k) is:\n\nf(x alpha) = frac1B(alpha) prod_i=1^k x_i^alpha_i - 1 quad text with \nB(alpha) = fracprod_i=1^k Gamma(alpha_i)Gamma left( sum_i=1^k alpha_i right)\nquad x_1 + cdots + x_k = 1\n\n# Let alpha be a vector\nDirichlet(alpha)         # Dirichlet distribution with parameter vector alpha\n\n# Let a be a positive scalar\nDirichlet(k, a)          # Dirichlet distribution with parameter a * ones(k)\n\n\n\n\n\n"
+    "text": "Dirichlet\n\nThe Dirichlet distribution is often used as the conjugate prior for Categorical or Multinomial distributions. The probability density function of a Dirichlet distribution with parameter alpha = (alpha_1 ldots alpha_k) is:\n\nf(x alpha) = frac1B(alpha) prod_i=1^k x_i^alpha_i - 1 quad text with \nB(alpha) = fracprod_i=1^k Gamma(alpha_i)Gamma left( sum_i=1^k alpha_i right)\nquad x_1 + cdots + x_k = 1\n\n# Let alpha be a vector\nDirichlet(alpha)         # Dirichlet distribution with parameter vector alpha\n\n# Let a be a positive scalar\nDirichlet(k, a)          # Dirichlet distribution with parameter a * ones(k)\n\n\n\n\n\n"
 },
 
 {
