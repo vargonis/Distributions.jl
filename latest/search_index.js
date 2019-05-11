@@ -777,6 +777,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "univariate.html#Distributions.PGeneralizedGaussian",
+    "page": "Univariate Distributions",
+    "title": "Distributions.PGeneralizedGaussian",
+    "category": "type",
+    "text": "PGeneralizedGaussian(α, μ, p)\n\nThe p-Generalized Gaussian distribution, more commonly known as the exponential power or the generalized normal distribution, with scale α, location μ, and shape p has the probability density function\n\nf(x mu alpha p) = fracp2alphaGamma(1p) e^-(fracx-mualpha)^p quad x in (-infty +infty)  alpha  0 p  0\n\nThe p-Generalized Gaussian (GGD) is a parametric distribution that incorporates the Normal and Laplacian distributions as special cases where p = 1 and p = 2. As p → ∞, the distribution approaches the Uniform distribution on [μ-α, μ+α].\n\nPGeneralizedGaussian()           # GGD with shape 2, scale 1, location 0, (the Normal distribution)\nPGeneralizedGaussian(loc,s,sh)   # GGD with location loc, scale s, and shape sh\n\nparams(d)                       # Get the parameters, i.e. (loc,s,sh,)\nshape(d)                        # Get the shape parameter, sh\nscale(d)                        # Get the scale parameter, s\nlocation(d)                     # Get the location parameter, loc\n\nExternal Links\n\nGeneralized Gaussian on Wikipedia\nReference implementation paper\n\n\n\n\n\n\n\n"
+},
+
+{
     "location": "univariate.html#Distributions.Rayleigh",
     "page": "Univariate Distributions",
     "title": "Distributions.Rayleigh",
@@ -861,7 +869,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Univariate Distributions",
     "title": "Continuous Distributions",
     "category": "section",
-    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChernoff\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogitNormal\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nRayleigh\nSemicircle\nStudentizedRange\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
+    "text": "Arcsine\nBeta\nBetaPrime\nBiweight\nCauchy\nChernoff\nChi\nChisq\nCosine\nEpanechnikov\nErlang\nExponential\nFDist\nFrechet\nGamma\nGeneralizedExtremeValue\nGeneralizedPareto\nGumbel\nInverseGamma\nInverseGaussian\nKolmogorov\nKSDist\nKSOneSided\nLaplace\nLevy\nLogistic\nLogitNormal\nLogNormal\nNoncentralBeta\nNoncentralChisq\nNoncentralF\nNoncentralT\nNormal\nNormalCanon\nNormalInverseGaussian\nPareto\nPGeneralizedGaussian\nRayleigh\nSemicircle\nStudentizedRange\nSymTriangularDist\nTDist\nTriangularDist\nTriweight\nUniform\nVonMises\nWeibull"
 },
 
 {
