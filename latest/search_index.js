@@ -1573,7 +1573,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Distribution Fitting",
     "title": "Distribution Fitting",
     "category": "section",
-    "text": "This package provides methods to fit a distribution to a given set of samples. Generally, one may writed = fit(D, x)This statement fits a distribution of type D to a given dataset x, where x should be an array comprised of all samples. The fit function will choose a reasonable way to fit the distribution, which, in most cases, is maximum likelihood estimation."
+    "text": "This package provides methods to fit a distribution to a given set of samples. Generally, one may writed = fit(D, x)This statement fits a distribution of type D to a given dataset x, where x should be an array comprised of all samples. The fit function will choose a reasonable way to fit the distribution, which, in most cases, is maximum likelihood estimation.note: Note\nOne can use as first argument simply the distribution name, like Binomial, or a concrete distribution with a type parameter, like Normal{Float64} or Exponential{Float32}.  However, in the latter case the type parameter of the distribution will be ignored:julia> fit(Cauchy{Float32}, collect(-4:4))\nCauchy{Float64}(μ=0.0, σ=2.0)"
 },
 
 {
