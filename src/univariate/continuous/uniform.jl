@@ -108,7 +108,7 @@ end
 
 #### Sampling
 
-rand(rng::AbstractRNG, d::Uniform) = d.a + (d.b - d.a) * rand(rng)
+rand(rng::AbstractRNG, d::Uniform{T}) where T = d.a + (d.b - d.a) * rand(rng, T)
 
 
 #### Fitting

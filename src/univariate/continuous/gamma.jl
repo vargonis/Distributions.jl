@@ -87,12 +87,12 @@ cf(d::Gamma, t::Real) = (1 - im * t * d.θ)^(-d.α)
 gradlogpdf(d::Gamma{T}, x::Real) where {T<:Real} =
     insupport(Gamma, x) ? (d.α - 1) / x - 1 / d.θ : zero(T)
 
-function rand(rng::AbstractRNG, d::Gamma)
+function rand(rng::AbstractRNG, d::Gamma{T}) where T
     if shape(d) < 1.0
         # TODO: shape(d) = 0.5 : use scaled chisq
         return rand(rng, GammaIPSampler(d))
     elseif shape(d) == 1.0
-        return rand(rng, Exponential(d.θ))
+        return rand(rng, Exponential{T}(d.θ))
     else
         return rand(rng, GammaGDSampler(d))
     end

@@ -75,14 +75,14 @@ function calc_q(s::GammaGDSampler, t)
     end
 end
 
-function rand(rng::AbstractRNG, s::GammaGDSampler)
+function rand(rng::AbstractRNG, s::GammaGDSampler{T}) where T
     # Step 2
-    t = randn(rng)
+    t = randn(rng, T)
     x = s.s + 0.5t
     t >= 0.0 && return x*x*s.scale
 
     # Step 3
-    u = rand(rng)
+    u = rand(rng, T)
     s.d*u <= t*t*t && return x*x*s.scale
 
     # Step 5
@@ -99,8 +99,8 @@ function rand(rng::AbstractRNG, s::GammaGDSampler)
         e = 0.0
         u = 0.0
         while true
-            e = randexp(rng)
-            u = 2.0rand(rng) - 1.0
+            e = randexp(rng, T)
+            u = 2.0rand(rng, T) - 1.0
             t = s.b + e*s.σ*sign(u)
             # Step 9
             t ≥ -0.718_744_837_717_19 && break
@@ -124,25 +124,25 @@ end
 # doi:10.1007/BF02293108
 
 # valid for 0 < shape <= 1
-struct GammaGSSampler <: Sampleable{Univariate,Continuous}
-    a::Float64
-    ia::Float64
-    b::Float64
-    scale::Float64
+struct GammaGSSampler{T<:Real} <: Sampleable{Univariate,Continuous}
+    a::T
+    ia::T
+    b::T
+    scale::T
 end
 
-function GammaGSSampler(d::Gamma)
+function GammaGSSampler(d::Gamma{T}) where T
     a = shape(d)
-    ia = 1.0 / a
-    b = 1.0+0.36787944117144233 * a
-    GammaGSSampler(a, ia, b, scale(d))
+    ia = one(T) / a
+    b = one(T) + T(0.36787944117144233) * a
+    GammaGSSampler{T}(a, ia, b, scale(d))
 end
 
-function rand(rng::AbstractRNG, s::GammaGSSampler)
+function rand(rng::AbstractRNG, s::GammaGSSampler{T}) where T
     while true
         # step 1
-        p = s.b*rand(rng)
-        e = randexp(rng)
+        p = s.b*rand(rng, T)
+        e = randexp(rng, T)
         if p <= 1.0
             # step 2
             x = exp(log(p)*s.ia)
@@ -162,31 +162,31 @@ end
 # doi:10.1145/358407.358414
 # http://www.cparity.com/projects/AcmClassification/samples/358414.pdf
 
-struct GammaMTSampler <: Sampleable{Univariate,Continuous}
-    d::Float64
-    c::Float64
-    κ::Float64
+struct GammaMTSampler{T<:Real} <: Sampleable{Univariate,Continuous}
+    d::T
+    c::T
+    κ::T
 end
 
-function GammaMTSampler(g::Gamma)
-    d = shape(g) - 1/3
-    c = 1.0 / sqrt(9.0 * d)
+function GammaMTSampler(g::Gamma{T}) where T
+    d = shape(g) - one(T)/3
+    c = one(T) / sqrt(9d)
     κ = d * scale(g)
-    GammaMTSampler(d, c, κ)
+    GammaMTSampler{T}(d, c, κ)
 end
 
-function rand(rng::AbstractRNG, s::GammaMTSampler)
+function rand(rng::AbstractRNG, s::GammaMTSampler{T}) where T
     while true
-        x = randn(rng)
-        v = 1.0 + s.c * x
-        while v <= 0.0
-            x = randn(rng)
-            v = 1.0 + s.c * x
+        x = randn(rng, T)
+        v = one(T) + s.c * x
+        while v <= zero(T)
+            x = randn(rng, T)
+            v = one(T) + s.c * x
         end
         v *= (v * v)
-        u = rand(rng)
+        u = rand(rng, T)
         x2 = x * x
-        if u < 1.0 - 0.331 * abs2(x2) || log(u) < 0.5 * x2 + s.d * (1.0 - v + log(v))
+        if u < one(T) - T(0.331) * abs2(x2) || log(u) < x2/2 + s.d * (one(T) - v + log(v))
             return v*s.κ
         end
     end
@@ -194,19 +194,19 @@ end
 
 # Inverse Power sampler
 # uses the x*u^(1/a) trick from Marsaglia and Tsang (2000) for when shape < 1
-struct GammaIPSampler{S<:Sampleable{Univariate,Continuous},T<:Real} <: Sampleable{Univariate,Continuous}
+struct GammaIPSampler{S<:Sampleable{Univariate,Continuous}, T<:Real} <: Sampleable{Univariate,Continuous}
     s::S #sampler for Gamma(1+shape,scale)
     nia::T #-1/scale
 end
 
-function GammaIPSampler(d::Gamma,::Type{S}) where S<:Sampleable
-    GammaIPSampler(Gamma(1.0 + shape(d), scale(d)), -1.0 / shape(d))
+function GammaIPSampler(d::Gamma{T}, ::Type{S}) where {T, S<:Sampleable}
+    GammaIPSampler(Gamma{T}(one(T) + shape(d), scale(d)), -one(T) / shape(d))
 end
-GammaIPSampler(d::Gamma) = GammaIPSampler(d,GammaMTSampler)
+GammaIPSampler(d::Gamma) = GammaIPSampler(d, GammaMTSampler)
 
-function rand(rng::AbstractRNG, s::GammaIPSampler)
+function rand(rng::AbstractRNG, s::GammaIPSampler{S,T}) where {S,T}
     x = rand(rng, s.s)
-    e = randexp(rng)
+    e = randexp(rng, T)
     x*exp(s.nia*e)
 end
 
