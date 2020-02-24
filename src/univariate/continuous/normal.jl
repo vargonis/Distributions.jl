@@ -32,6 +32,7 @@ struct Normal{T<:Real} <: ContinuousUnivariateDistribution
     σ::T
     Normal{T}(µ::T, σ::T) where {T<:Real} = new{T}(µ, σ)
 end
+Base.eltype(::Normal{T}) where T = T
 
 function Normal(μ::T, σ::T; check_args=true) where {T <: Real}
     check_args && @check_args(Normal, σ >= zero(σ))
@@ -115,6 +116,7 @@ function logpdf(d::Normal, x::Real)
         z = zval(Normal(μ, σ), x)
     end
     return _normlogpdf(z) - log(σ)
+    # return _normlogpdf(z) # probando cual puede ser el problema del broadcast a CuArray
 end
 
 # pdf

@@ -28,6 +28,7 @@ struct Uniform{T<:Real} <: ContinuousUnivariateDistribution
     b::T
     Uniform{T}(a::T, b::T) where {T <: Real} = new{T}(a, b)
 end
+Base.eltype(::Uniform{T}) where T = T
 
 function Uniform(a::T, b::T; check_args=true) where {T <: Real}
     check_args && @check_args(Uniform, a < b)

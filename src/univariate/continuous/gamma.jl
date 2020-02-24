@@ -29,6 +29,7 @@ struct Gamma{T<:Real} <: ContinuousUnivariateDistribution
     θ::T
     Gamma{T}(α, θ) where {T} = new{T}(α, θ)
 end
+Base.eltype(::Gamma{T}) where T = T
 
 function Gamma(α::T, θ::T; check_args=true) where {T <: Real}
     check_args && @check_args(Gamma, α > zero(α) && θ > zero(θ))
